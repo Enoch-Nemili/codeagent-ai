@@ -2,7 +2,7 @@
 
 **Multi-agent AI code review system** that analyzes GitHub pull requests using specialized AI agents for logic bugs, style issues, and security vulnerabilities.
 
-[![CI](https://github.com/Enoch-Nemili/codeagent/actions/workflows/ci.yml/badge.svg)](https://github.com/Enoch-Nemili/codeagent/actions/workflows/ci.yml)
+[![CI](https://github.com/Enoch-Nemili/codeagent-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Enoch-Nemili/codeagent-ai/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -69,7 +69,7 @@ CodeAgent uses a **fan-out/fan-in multi-agent architecture** powered by [LangGra
 
 ```bash
 # Clone the repo
-git clone https://github.com/Enoch-Nemili/codeagent.git
+git clone https://github.com/Enoch-Nemili/codeagent-ai.git
 cd codeagent
 
 # Create virtual environment
