@@ -31,7 +31,7 @@ def post_review_comment(
     pr = repo.get_pull(pr_number)
 
     comment = pr.create_issue_comment(report.format_markdown())
-    return comment.html_url
+    return str(comment.html_url)
 
 
 def post_inline_comments(
