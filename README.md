@@ -1,3 +1,5 @@
+![CodeAgent](docs/social-preview.png)
+
 # 🔍 CodeAgent
 
 **Multi-agent AI code review system** that analyzes GitHub pull requests using specialized AI agents for logic bugs, style issues, and security vulnerabilities.
