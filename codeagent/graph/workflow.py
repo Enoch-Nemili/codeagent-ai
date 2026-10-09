@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from langgraph.graph import END, StateGraph
+from langgraph.graph.state import CompiledStateGraph
 
 from codeagent.agents.logic_agent import run_logic_agent
 from codeagent.agents.orchestrator import build_report
@@ -13,7 +14,7 @@ from codeagent.github.fetcher import fetch_pr
 from codeagent.models.state import ReviewState
 
 
-def create_workflow(config: Config) -> StateGraph:
+def create_workflow(config: Config) -> CompiledStateGraph:
     """Create and compile the LangGraph review workflow.
 
     The graph structure:

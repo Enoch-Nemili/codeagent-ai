@@ -7,7 +7,7 @@ from typing import Any
 
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
-from pydantic import ValidationError
+from pydantic import SecretStr, ValidationError
 
 from codeagent.config import Config
 from codeagent.models.findings import Finding
@@ -18,7 +18,7 @@ def create_llm(config: Config) -> ChatOpenAI:
     return ChatOpenAI(
         model=config.llm_model,
         temperature=config.llm_temperature,
-        api_key=config.openai_api_key,
+        api_key=SecretStr(config.openai_api_key),  # SecretStr keeps the key out of reprs and logs
     )
 
 
