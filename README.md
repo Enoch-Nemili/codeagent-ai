@@ -5,6 +5,7 @@
 [![CI](https://github.com/Enoch-Nemili/codeagent-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Enoch-Nemili/codeagent-ai/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Release](https://img.shields.io/github/v/release/Enoch-Nemili/codeagent-ai)](https://github.com/Enoch-Nemili/codeagent-ai/releases)
 
 ## Architecture
 
@@ -63,14 +64,14 @@ CodeAgent uses a **fan-out/fan-in multi-agent architecture** powered by [LangGra
 
 - Python 3.11+
 - An OpenAI API key (GPT-4o-mini recommended for cost efficiency)
-- A GitHub personal access token with `repo` scope
+- A GitHub fine-grained personal access token with *Pull requests: Read and write* on the repos you review
 
 ### Installation
 
 ```bash
 # Clone the repo
 git clone https://github.com/Enoch-Nemili/codeagent-ai.git
-cd codeagent
+cd codeagent-ai
 
 # Create virtual environment
 python -m venv .venv
@@ -173,6 +174,18 @@ codeagent/
 **Why structured output?** Each agent returns findings as validated Pydantic models rather than free-form text. This ensures consistent formatting, enables programmatic deduplication, and makes the review parseable for downstream integrations.
 
 **Why fan-out/fan-in?** Running agents in parallel reduces total review time by ~3x. The orchestrator's deduplication step prevents the same issue from being reported by multiple agents.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) and [SECURITY.md](SECURITY.md).
+
+## Contact
+
+**Nemili Enoch Das**, MS Computer Science @ George Washington University. Open to full-time and early-career software engineering roles in AI infrastructure, backend and ML systems.
+
+- Email: [enoch.das@gmail.com](mailto:enoch.das@gmail.com)
+- GitHub: [@Enoch-Nemili](https://github.com/Enoch-Nemili)
+- LinkedIn: [enoch-nemili](https://www.linkedin.com/in/enoch-nemili/)
 
 ## License
 
