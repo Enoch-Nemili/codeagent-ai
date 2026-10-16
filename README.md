@@ -175,7 +175,7 @@ codeagent/
 
 **Why structured output?** Each agent returns findings as validated Pydantic models rather than free-form text. This ensures consistent formatting, enables programmatic deduplication, and makes the review parseable for downstream integrations.
 
-**Why fan-out/fan-in?** Running agents in parallel reduces total review time by ~3x. The orchestrator's deduplication step prevents the same issue from being reported by multiple agents.
+**Why fan-out/fan-in?** The three agents run in parallel, so review time is set by the slowest agent rather than the sum of all three (expected to be up to ~3x faster; not yet benchmarked). The orchestrator's deduplication step prevents the same issue from being reported by multiple agents.
 
 ## Contributing
 
